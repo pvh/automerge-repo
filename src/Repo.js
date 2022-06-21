@@ -1,6 +1,6 @@
 import EventEmitter from 'eventemitter3'
-import Automerge from 'automerge'
 import { v4 as uuid } from 'uuid'
+import * as Automerge from 'automerge-js'
 import DocHandle from './DocHandle.js'
 
 export default class Repo extends EventEmitter {

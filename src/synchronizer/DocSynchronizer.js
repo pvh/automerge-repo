@@ -3,12 +3,12 @@
  * receive & dispatch sync messages to bring it in-line with all other peers' versions.
  */
 import EventEmitter from 'eventemitter3'
-import Automerge from 'automerge'
+import * as Automerge from 'automerge-js'
 
 export default class DocSynchronizer extends EventEmitter {
   handle
 
-  // we track this separately from syncStates because you might have more syncStates than active peers
+  // track this separately from syncStates because you might have more syncStates than active peers
   peers = []
   syncStates = {} // peer -> syncState
 
